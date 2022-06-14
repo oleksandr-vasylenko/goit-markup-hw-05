@@ -292,7 +292,7 @@ a {
   margin-bottom: 50px;
 }
 
-.service-block {
+.services-thumb {
   position: relative;
 }
 
@@ -304,7 +304,7 @@ a {
   width: 100%;
 
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14;
   text-align: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
