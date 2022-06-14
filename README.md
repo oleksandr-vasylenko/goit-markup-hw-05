@@ -1,3 +1,3 @@
-# goit-markup-hw-02
+# goit-markup-hw-05
 
-Vector Icons and Backgrounds layout
+Positioned elements, transitions and animations
