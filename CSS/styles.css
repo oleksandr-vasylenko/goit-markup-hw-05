@@ -139,13 +139,13 @@ a {
 .header-nav-link.current::after {
   content: '';
   position: absolute;
-  width: 100%;
-  height: 4px;
+
   left: 0;
   bottom: 0;
-
-  background: #2196f3;
+  width: 100%;
   border-radius: 2px;
+  height: 4px;
+  background: var(--accent);
 }
 
 .header-nav-list {
