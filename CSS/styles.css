@@ -309,7 +309,7 @@ a {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--white-text);
-  background: rgba(47, 48, 58, 0.8);
+  background-color: rgba(47, 48, 58, 0.8);
 }
 
 /* --------------- TEAM --------------- */
