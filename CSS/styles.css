@@ -426,7 +426,8 @@ a {
   fill: var(--accent);
 }
 
-.client-item-link:hover {
+.client-item-link:hover,
+.client-item-link:focus {
   border: 1px solid var(--accent);
 }
 
@@ -589,6 +590,29 @@ a {
 
 .portfolio-item:nth-last-child(-n + 3) {
   margin-bottom: 0;
+}
+
+.portfolio-thumb {
+  position: relative;
+}
+
+.portfolio-item-descr {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  padding: 63px 24px;
+
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--white-text);
+  background-color: rgba(33, 150, 243, 0.9);
+}
+
+.portfolio-item-descr:hover,
+.portfolio-item-descr:focus {
+  opacity: 1;
 }
 
 .portfolio-item .portfolio-item-info {
