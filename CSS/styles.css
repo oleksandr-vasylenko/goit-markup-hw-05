@@ -253,6 +253,9 @@ a {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 1;
+
+  opacity: 1;
+  transition: opacity var(--speed) var(--duration);
 }
 
 .backdrop.is-hidden {
