@@ -196,7 +196,7 @@ a {
 
 /* --------------- MAIN --------------- */
 .hero {
-  max-width: 1600px; /*need to confirm */
+  max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background/hero-bcg.jpg);
@@ -244,6 +244,7 @@ a {
   background-color: #188ce8;
 }
 
+/* MODAL */
 .backdrop {
   position: fixed;
   top: 0;
@@ -252,6 +253,11 @@ a {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   z-index: 1;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .modal {
