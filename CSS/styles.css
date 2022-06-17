@@ -98,14 +98,15 @@ a {
 }
 
 .header-logo {
+  display: block;
+  margin-right: 93px;
+
   color: var(--secondary-text);
   font-family: var(--logo-font);
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  display: block;
-  margin-right: 93px;
 }
 
 .logo-blue {
@@ -143,10 +144,10 @@ a {
 .header-nav-link.current::after {
   content: '';
   position: absolute;
-
   left: 0;
-  bottom: 0;
+  bottom: -1px;
   width: 100%;
+
   border-radius: 2px;
   height: 4px;
   background: var(--accent);
@@ -158,13 +159,15 @@ a {
 
 /* header-contact */
 .header-contact-link {
+  display: flex;
+  align-items: center;
+
   color: var(--main-text);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  display: flex;
-  align-items: center;
+
   transition: color var(--speed) var(--duration);
 }
 
@@ -196,16 +199,17 @@ a {
 
 /* --------------- MAIN --------------- */
 .hero {
-  max-width: 1600px;
+  padding-top: 200px;
+  padding-bottom: 200px;
   margin-left: auto;
   margin-right: auto;
+  max-width: 1600px;
+  text-align: center;
+
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background/hero-bcg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  text-align: center;
 }
 
 .hero .container {
@@ -213,16 +217,21 @@ a {
 }
 
 .hero-title {
+  margin-bottom: 30px;
+
   color: var(--white-text);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
+
   text-transform: uppercase;
-  margin-bottom: 30px;
 }
 
 .hero-button {
+  padding: 10px 32px 10px 32px;
+  min-width: 200px;
+
   background-color: var(--accent);
   color: var(--white-text);
   cursor: pointer;
@@ -231,11 +240,10 @@ a {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
-  padding: 10px 32px 10px 32px;
-  min-width: 200px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: none;
+
   transition: background-color var(--speed) var(--duration), box-shadow var(--speed) var(--duration);
 }
 
@@ -251,10 +259,11 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
   z-index: 1;
 
+  background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
+
   transition: opacity var(--speed) var(--duration);
 }
 
@@ -271,9 +280,8 @@ a {
   position: absolute;
   top: 50%;
   left: 50%;
-
   width: 528px;
-  height: 581px;
+  min-height: 581px;
 
   background-color: var(--white-text);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -292,9 +300,17 @@ a {
   right: 8px;
   width: 30px;
   height: 30px;
+
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   fill: #000000;
+  background-color: var(--white-text);
+  cursor: pointer;
+}
+
+.modal-close-btn:hover {
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+  fill: var(--accent);
 }
 
 /* --------------- VALUES/SERVICES --------------- */
@@ -315,21 +331,23 @@ a {
 .values-block {
   display: flex;
   justify-content: center;
+  padding-bottom: 25px;
+  margin-bottom: 30px;
+
   background: #f5f4fa;
   border-radius: 4px;
   padding-top: 25px;
-  padding-bottom: 25px;
-  margin-bottom: 30px;
 }
 
 .val-headline {
+  margin-bottom: 10px;
+
   color: var(--secondary-text);
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  margin-bottom: 10px;
 }
 
 .val-descr {
@@ -353,12 +371,13 @@ a {
 }
 
 .title {
+  margin-bottom: 50px;
+
   color: var(--secondary-text);
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
-  margin-bottom: 50px;
 }
 
 .services-thumb {
@@ -406,22 +425,24 @@ a {
 }
 
 .team-members-name {
+  margin-bottom: 10px;
+
   color: var(--secondary-text);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
-  margin-bottom: 10px;
 }
 
 .team-members-position {
+  margin-bottom: 16px;
+
   color: var(--main-text);
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
-  margin-bottom: 16px;
 }
 
 .team {
@@ -447,8 +468,10 @@ a {
   justify-content: center;
   width: 44px;
   height: 44px;
+
   border-radius: 50%;
   color: #afb1b8;
+
   transition: background-color var(--speed) var(--duration), color var(--speed) var(--duration);
 }
 
@@ -481,16 +504,18 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+
   border: 1px solid #afb1b8;
   border-radius: 4px;
   width: 100%;
   height: 100%;
+
   transition: border var(--speed) var(--duration);
 }
 
 .clients-logo {
   fill: #afb1b8;
-  transition: fill var(--speed) var(--duration1);
+  transition: fill var(--speed) var(--duration);
 }
 
 .client-item-link:hover .clients-logo,
@@ -505,9 +530,10 @@ a {
 
 /* --------------- FOOTER ---------------- */
 .footer {
-  background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
+
+  background-color: #2f303a;
 }
 
 .footer-address {
@@ -519,14 +545,15 @@ a {
 }
 
 .footer-logo {
+  display: inline-block;
+  margin-bottom: 20px;
+
   font-family: var(--logo-font);
   color: var(--white-text);
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  margin-bottom: 20px;
-  display: inline-block;
 }
 
 .footer .container {
@@ -543,6 +570,7 @@ a {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+
   transition: color var(--speed) var(--duration);
 }
 
@@ -563,12 +591,13 @@ a {
 
 /* FOOTER SOCIAL */
 .social-title {
+  margin-bottom: 20px;
+
   color: var(--white-text);
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  margin-bottom: 20px;
 }
 
 .footer .container {
@@ -598,9 +627,11 @@ a {
   justify-content: center;
   width: 44px;
   height: 44px;
+
   border-radius: 50%;
   color: var(--white-text);
   background-color: rgba(255, 255, 255, 0.1);
+
   transition: background-color var(--speed) var(--duration);
 }
 
@@ -622,6 +653,8 @@ a {
 }
 
 .port-filter-btn {
+  padding: 6px 22px 6px 22px;
+
   color: var(--secondary-text);
   background-color: #f5f4fa;
   font-family: inherit;
@@ -631,9 +664,9 @@ a {
   line-height: 1.63;
   text-align: center;
   letter-spacing: 0.03em;
-  padding: 6px 22px 6px 22px;
   border-radius: 4px;
   border: none;
+
   transition: background-color var(--speed) var(--duration), color var(--speed) var(--duration), box-shadow var(--speed) var(--duration);
 }
 
@@ -654,9 +687,9 @@ a {
 }
 
 .portfolio-item {
-  width: calc((100% - 60px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
+  width: calc((100% - 60px) / 3);
 }
 
 .portfolio-item:nth-child(3n) {
@@ -675,15 +708,20 @@ a {
 .portfolio-overlay {
   position: absolute;
   top: 0;
-  padding: 63px 24px;
-  transform: translateY(100%);
-  transition: transform var(--speed) var(--duration);
+  display: flex;
+  align-items: center;
+  padding-left: 24px;
+  padding-right: 24px;
+  height: 100%;
 
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
   color: var(--white-text);
   background-color: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(100%);
+  transition: transform var(--speed) var(--duration);
 }
 
 .portfolio-item .link:hover .portfolio-overlay,
@@ -693,17 +731,19 @@ a {
 
 .portfolio-item .portfolio-item-info {
   padding: 20px 24px;
+
   border-right: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
 }
 
 .portfolio-item-name {
+  padding-bottom: 4px;
+
   color: var(--secondary-text);
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  padding-bottom: 4px;
 }
 
 .portfolio-item-service {
@@ -715,7 +755,8 @@ a {
 
 .portfolio-link {
   display: block;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  transition: box-shadow var(--speed) var(--duration);
 }
 
 .portfolio-link:hover,
